@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         lexend: ['Lexend Tera', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        dm: ['DM Sans', 'sans-serif'],
       }
     },
   },
