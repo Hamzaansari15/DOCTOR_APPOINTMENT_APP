@@ -32,6 +32,14 @@ export default function () {
         },
     ]
 
+    const teamMember = [
+        { name: 'John Carter', position: 'CEO & Co-Founder', image: '/public/images/team-image1.svg' },
+        { name: 'Sophie Moore', position: 'dental specialist', image: '/public/images/team-image2.svg' },
+        { name: 'Matt Cannon', position: 'orthopedic', image: '/public/images/team-image3.svg' },
+        { name: 'Andy Smith', position: 'brain surgeon', image: '/public/images/team-image4.svg' },
+        { name: 'Lily Woods', position: 'heart specialist', image: '/public/images/team-image5.svg' },
+        { name: 'Patrick Meyer', position: 'eye specialist', image: '/public/images/team-image6.svg' },
+    ]
 
     return (
         <Layout>
@@ -65,7 +73,6 @@ export default function () {
                             <div className="flex gap-16">
                                 <input className="w-72 h-12 bg-white border border-[#007E85] outline-none px-4 rounded-lg" placeholder="Name" type="text" name="" id="" />
                                 <input className="w-72 h-12 bg-white border border-[#007E85] outline-none px-4 rounded-lg" placeholder="Speciality" type="text" name="" id="" />
-                                <input type="text" name="" id="" />
                             </div>
                             <button className="w-52 h-12 bg-[#007E85] rounded-lg font-dm text-white text-xl">Search</button>
                         </div>
@@ -129,6 +136,69 @@ export default function () {
                                 )
                             })
                         }
+                    </div>
+                </section>
+                <section className="mt-12 mb-4 flex flex-col items-center">
+                    <p className="text-4xl text-[#007E85] font-bold font-dm leading-[60px]">Meet our team members</p>
+                    <p className="text-lg font-dm text-[#555] text-center leading-5">Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida
+                        <br />    malesuada quam commodo id integer nam.
+                    </p>
+                    <div className="w-full grid grid-cols-3 gap-4 my-8">
+                        {teamMember?.map(item => {
+                            return (
+                                <div key={item?.image} className="col-span-1 h-full flex justify-center">
+                                    <div className="w-full h-full max-w-xs flex flex-col items-center p-6 bg-white rounded-3xl border border-gray-300">
+                                        <img className="mb-4" width={120} height={120} src={item?.image} alt={item?.image} srcset={item?.image} />
+                                        <p className="text-2xl font-dm text-[#007E85] font-bold">{item?.name}</p>
+                                        <p className="text-[#333] font-dm text-lg font-bold">{item?.position}
+                                        </p>
+                                        <p className="text-[#555] font-dm text-lg text-center my-2 leading-6">Lorem ipsum dolor sit amet consecte adipiscing elit amet hendrerit pretium nulla sed enim iaculis mi.
+                                            <div className="flex gap-4 justify-center mt-6">
+                                                <img width={36} height={36} src="/public/images/Facebook.svg" alt="/public/images/Facebook.svg" />
+                                                <img width={36} height={36} src="/public/images/Twitter.svg" alt="/public/images/Facebook.svg" />
+                                                <img width={36} height={36} src="/public/images/Instagram.svg" alt="/public/images/Facebook.svg" />
+                                                <img width={36} height={36} src="/public/images/Linkedin.svg" alt="/public/images/Facebook.svg" />
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+                <section className="w-full">
+                    <p className="text-center text-cyan-700 text-4xl font-bold font-dm my-2">Testimonial</p>
+                    <p class="text-center text-neutral-600 text-lg font-normal font-dm leading-6">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar
+                        <br />    elementum tempus hac tellus libero accumsan.
+                    </p>
+                    <div className="w-full grid grid-cols-3 my-10">
+                        <div className="col-span-1 flex justify-center">
+                            <div className="w-full h-full max-w-xs flex flex-col p-8 bg-white rounded-3xl border border-gray-300">
+                                <img className="my-2" width={80} height={80} src="/public/images/image1.svg" alt="/public/images/image1.svg" />
+                                <p className="font-dm my-2 text-xl text-[#333] font-bold">“An amazing service”</p>
+                                <p className="text-[#555] text-lg font-dm leading-6">Lorem ipsum dolor sit ametolil col consectetur adipiscing lectus a nunc mauris scelerisque sed egestas.</p>
+                                <p className="mt-6 leading-6 text-[#007E85] font-dm text-lg font-bold">John Carter</p>
+                                <p className="text-[#555] font-dm text-lg">CEO at Google</p>
+                            </div>
+                        </div>
+                        <div className="col-span-1 flex justify-center">
+                            <div className="w-full h-full max-w-xs flex flex-col p-8 bg-white rounded-3xl border border-gray-300">
+                                <img className="my-2" width={80} height={80} src="/public/images/image1.svg" alt="/public/images/image1.svg" />
+                                <p className="font-dm my-2 text-xl text-[#333] font-bold">“An amazing service”</p>
+                                <p className="text-[#555] text-lg font-dm leading-6">Lorem ipsum dolor sit ametolil col consectetur adipiscing lectus a nunc mauris scelerisque sed egestas.</p>
+                                <p className="mt-6 leading-6 text-[#007E85] font-dm text-lg font-bold">John Carter</p>
+                                <p className="text-[#555] font-dm text-lg">CEO at Google</p>
+                            </div>
+                        </div>
+                        <div className="col-span-1 flex justify-center">
+                            <div className="w-full h-full max-w-xs flex flex-col p-8 bg-white rounded-3xl border border-gray-300">
+                                <img className="my-2" width={80} height={80} src="/public/images/image1.svg" alt="/public/images/image1.svg" />
+                                <p className="font-dm my-2 text-xl text-[#333] font-bold">“An amazing service”</p>
+                                <p className="text-[#555] text-lg font-dm leading-6">Lorem ipsum dolor sit ametolil col consectetur adipiscing lectus a nunc mauris scelerisque sed egestas.</p>
+                                <p className="mt-6 leading-6 text-[#007E85] font-dm text-lg font-bold">John Carter</p>
+                                <p className="text-[#555] font-dm text-lg">CEO at Google</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
