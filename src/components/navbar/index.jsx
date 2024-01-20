@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo.svg'
+// import logo from '../../assets/logo.svg'
 
 export default function () {
 
@@ -17,10 +17,10 @@ export default function () {
     return (
         <nav className="flex items-center justify-between my-4">
             <div className='flex items-center gap-2'>
-                <img className='w-10 h-10' src={logo} alt="/image 16.svg" />
+                <img className='w-10 h-10' src='/public/images/logo.png' alt="/image 16.svg" />
                 <p className='text-[#007E85] font-lexend text-2xl font-semibold'>Health<span className='text-[#6EAB36]'>care</span></p>
             </div>
-            <ul className='flex items-center gap-8'>
+            <ul className='hidden lg:flex items-center gap-8'>
                 {NAV_LINK.map(item => {
                     return (
                         <Link to={item?.link} key={item?.title}>
@@ -32,8 +32,7 @@ export default function () {
                     )
                 })}
             </ul>
-            <div className='flex items-center gap-12'>
-                <p className='font-lexend font-medium text-[#007E85]'>Sign Up</p>
+            <div className='hidden xs:flex items-center gap-12'>
                 <button className='border-none px-8 py-1.5 bg-[#007E85] rounded-md text-white font-lexend'>Log In</button>
             </div>
         </nav>
